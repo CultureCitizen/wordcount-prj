@@ -1,0 +1,12 @@
+<h1>WORD COUNT: RESULT</h1>
+<a href="{% url 'home' %}"> Start Again </a>
+<p>There are {{count}} words in your text</p>
+<br/>
+<h2>Frequent words</h2>
+{% for w, c in wordlist %}
+{{w}} : {{c}}
+<br/>
+{% endfor %}
+<br/>
+<h2>Full text</h2>
+<p>{{fulltext}}</p>
